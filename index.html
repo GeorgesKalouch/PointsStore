@@ -339,7 +339,7 @@
           return;
         }
 
-        const redirectUri = `${window.location.origin}/pointsStore`;
+        const redirectUri = window.location.href;
         const scopes = "user:read:email"; // Basic scope to get user info
 
         const twitchAuthUrl = `https://id.twitch.tv/oauth2/authorize?response_type=token&client_id=${TWITCH_CLIENT_ID}&redirect_uri=${redirectUri}&scope=${scopes}`;
@@ -693,4 +693,5 @@
     </script>
   </body>
 </html>
+
 
